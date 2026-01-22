@@ -50,5 +50,8 @@ export default defineConfig((env) => {
         ignoreTryCatch: false,
       },
     },
+    base: process.env.NODE_ENV === 'production'
+      ? '/chatgpt-encode/'  // 替换为您的仓库名称
+      : '/',
   }
 })
